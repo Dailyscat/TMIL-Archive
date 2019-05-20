@@ -1,8 +1,3 @@
-## Virtual Machine과 실제 메모리 관계 
-<br/>
-
-<img src="vmAndMemory.png">
-
 ## VMWare의 Snapshot 기능
 <br/>
 
