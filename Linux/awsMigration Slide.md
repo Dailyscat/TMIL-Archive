@@ -18,3 +18,7 @@
 5. AWS에서 SAP 운영하기 – 한국 고객의 모범 사례 집중 분석 - (조영준 상무 / 김진호 선임부장, BSG Partners)
 
 * https://www.slideshare.net/awskorea/aws-sap-bsg-partners
+
+6. 신입 개발자가 스타트업에서 AWS로 살아남는 이야기 - 조용진, 모두의 캠퍼스 :
+
+* https://www.slideshare.net/awskorea/aws-aws-summit-seoul-2019-141289883
