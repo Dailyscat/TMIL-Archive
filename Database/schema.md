@@ -6,8 +6,4 @@
 
 스키마는 한번 정의되면 자주 변경되지 않지만, 인스턴스는 계속 변하는 특성이 있다.
 
-
 <img src="https://www.researchgate.net/profile/Massimo_Cafaro/publication/231315480/figure/fig4/AS:614189408198682@1523445574930/Relational-schema-of-the-grid-database.png">
-
-
-#### 외부 스키마
