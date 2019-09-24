@@ -158,7 +158,7 @@ _Lustre_ : 러스터는 병렬 분산 파일 시스템으로서 주로 고성능
 - Persistent Disk
   VM 인스턴스용 블록 스토리지입니다.
 
-- Firebase용 Cloud Storage
+- Firebase용 Crloud Storage
   손쉽게 콘텐츠를 저장하고 제공합니다.
 
 - Cloud Filestore
