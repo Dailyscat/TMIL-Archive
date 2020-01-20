@@ -61,13 +61,19 @@ signature는 secret key를 포함하여 암호화되어 있다.
 
 ##### base64 Encoding(부호화)
 
-목적: base64 방식으로 data를 인코딩할 때 일련의 Bytes(data)를 text로 변환하는것
+목적: base64 방식으로 data를 인코딩할 때 일련의 Bytes(data)를 text(ASCII TEXT DATA)로 변환하는것
 
 이는 임의의 3byte(octets)를 변환하여 표현 되도록 설계되었고 대소문자를 분리하여 표현하지만 그 의미를 인간이 알아볼 수 있도록 설계되어지진 않았다.
 
 base64는 왼쪽에서 오른쪽으로 인코딩되며 각각의 6비트 그룹은 Base64 Tabel의 index(색인)를 가리킨다.
 
-여기서 65번째 문자인 "=")은 특수한 처리를 하도록 설계되어 있는데, 만약 입력된 바이트(8bit)가 하나라면 출력 중 두 개만이 사용되고 나머지 둘은 "="으로 패딩되며, 입력된 바이트가 둘이라면 출력 중 세 개 만이 사용되고 나머지 하나는 "="으로 패딩되게 된다.
+여기서 65번째 문자인 "="은 특수한 처리를 하도록 설계되어 있는데, 간단하게 데이터의 끝을 얘기한다고 생각하면 된다.
+
+만약 입력된 바이트(8bit)가 하나라면 출력 중 두 개만이 사용되고 나머지 둘은 "="으로 패딩되며, 입력된 바이트가 둘이라면 출력 중 세 개 만이 사용되고 나머지 하나는 "="으로 패딩되게 된다.
+
+<img src="https://t1.daumcdn.net/cfile/tistory/1445B33B4FD8338B35">
+
+위의 결과를 보면 a라는 문자 하나를 넣었을 때는 YQ==으로 base64 table에 없는 '=' 문자가 추가된 것을 알 수 있다. '='은 bit수를 맞춰주기 위해 0으로 채워주는 패딩이라는 것이다.
 
 ##### 부호화란?
 
@@ -136,3 +142,4 @@ example:
       https://tools.ietf.org/html/rfc4648#section-5
       https://ko.wikipedia.org/wiki/%EC%98%A5%ED%85%9F_(%EC%BB%B4%ED%93%A8%ED%8C%85)
       http://www.opennaru.com/opennaru-blog/jwt-json-web-token/
+      https://bbolmin.tistory.com/46
