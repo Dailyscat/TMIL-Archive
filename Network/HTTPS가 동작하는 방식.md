@@ -110,3 +110,21 @@ HTTPS 통신은 제3자 인증을 사용한다. 인증기관으로부터 공인�
 
 - 실제 데이터 암호화 방식: 대칭키
 - 상기 대칭키를 서로 공유하기 위한 암호화 방식: 공개키
+
+
+      참조:
+
+      SSL 동작 방식을 간단히 알아보기
+      https://offbyone.tistory.com/274
+
+      HTTPS와 SSL 인증서, SSL 동작방법 · 초보몽키의 개발공부로그
+      https://wayhome25.github.io/cs/2018/03/11/ssl-https/
+
+      국제 인터넷 표준화 기구 - 위키백과, 우리 모두의 백과사전
+      https://ko.wikipedia.org/wiki/%EA%B5%AD%EC%A0%9C_%EC%9D%B8%ED%84%B0%EB%84%B7_%ED%91%9C%EC%A4%80%ED%99%94_%EA%B8%B0%EA%B5%AC
+
+      AES - 나무위키
+      https://namu.wiki/w/AES#s-5
+
+      디지털 서명이란 무엇인가요? | Binance Academy
+      https://www.binance.vision/ko/blockchain/what-is-a-digital-signature
