@@ -1,5 +1,19 @@
 # Abstract Factory 패턴
 
+구체적인 클래스에 의존하지 않고 서로 연관되거나 의존적인 객체들의 조합을 만드는 인터페이스를 제공하는 패턴.
+
+싱글턴, 팩토리 메서드 패턴을 사용한다.
+
+추상 팩토리 패턴은 팩토리 메서드 패턴을 좀 더 캡슐화한 방식이라고 볼 수 있다.
+
+서로 관련이 있는 객체들을 통째로 묶어서 팩토리 클래스를 만들고, 이들 팩토리를 조건에 따라 생성하도록 다시 팩토리를 만들어서 객체를 생성하는 패턴
+
+관련성 있는 여러 종류의 객체를 일관된 방식으로 생성하는 경우에 유용하다.
+
+\*\* 여기서 중요한건 TV와 TVFactory 함수(인터페이스)가 인터페이스의 역할을 함으로써 여러 팩토리가 같은 추상화된 같은 인터페이스를 통해서 관리가 가능하다는 것.
+
+즉 밑의 코드는 TvProduct라는 클래스가 여러 상품 팩토리 객체를 통해 만들어진 상품 객체를 이용할 수 있는 코드이다.
+
     function Interface() {
       this.implements = function(obj) {
         var notImplementMethod = [];
@@ -253,11 +267,9 @@
 
     test();
 
-추상 팩토리 패턴은 상품을 만들어내는 팩토리가 여러개 있을 때 각 팩토리가 제공하는 메서드를 공통된 인터페이스를 통해 구현하게 한다.
-
-\*\* 여기서 중요한건 TV와 TVFactory 함수(인터페이스)가 인터페이스의 역할을 함으로써 여러 팩토리가 같은 추상화된 같은 인터페이스를 통해서 관리가 가능하다는 것.
-
-즉 위의 코드는 TvProduct라는 클래스가 여러 상품 팩토리 객체를 통해 만들어진 상품 객체를 이용할 수 있는 코드이다.
 
     참조:
     https://blog.naver.com/PostView.nhn?blogId=mycho&logNo=221843113038&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postList
+    https://victorydntmd.tistory.com/300
+    https://gmlwjd9405.github.io/2018/08/08/abstract-factory-pattern.html
+    https://gmlwjd9405.github.io/2018/08/08/abstract-factory-pattern.html
