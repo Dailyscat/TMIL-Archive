@@ -179,57 +179,58 @@ UML 다이어그램을 해석해보면
 
 <img src="https://gmlwjd9405.github.io/images/design-pattern-composite/composite-solution1.png">
 
+```
 public abstract class ComputerDevice {
-public abstract int getPrice();
-public abstract int getPower();
+  public abstract int getPrice();
+  public abstract int getPower();
 }
 
 public class Keyboard extends ComputerDevice {
-private int price;
-private int power;
-public Keyboard(int power, int price) {
-this.power = power;
-this.price = price;
-}
-public int getPrice() { return price; }
-public int getPower() { return power; }
+  private int price;
+  private int power;
+  public Keyboard(int power, int price) {
+    this.power = power;
+    this.price = price;
+  }
+  public int getPrice() { return price; }
+  public int getPower() { return power; }
 }
 public class Body { 동일한 구조 }
 public class Monitor { 동일한 구조 }
 
 public class Computer extends ComputerDevice {
-// 복수 개의 ComputerDevice 객체를 가리킴
-private List<ComputerDevice> components = new ArrayList<ComputerDevice>();
+  // 복수 개의 ComputerDevice 객체를 가리킴
+  private List<ComputerDevice> components = new ArrayList<ComputerDevice>();
 
-// ComputerDevice 객체를 Computer 클래스에 추가
-public addComponent(ComputerDevice component) { components.add(component); }
-// ComputerDevice 객체를 Computer 클래스에서 제거
-public removeComponent(ComputerDevice component) { components.remove(component); }
+  // ComputerDevice 객체를 Computer 클래스에 추가
+  public addComponent(ComputerDevice component) { components.add(component); }
+  // ComputerDevice 객체를 Computer 클래스에서 제거
+  public removeComponent(ComputerDevice component) { components.remove(component); }
 
-// 전체 가격을 포함하는 각 부품의 가격을 합산
-public int getPrice() {
-int price = 0;
-for(ComputerDevice component : components) {
-price += component.getPrice();
-}
-return price;
-}
-// 전체 소비 전력량을 포함하는 각 부품의 소비 전력량을 합산
-public int getPower() {
-int power = 0;
-for(ComputerDevice component : components) {
-price += component.getPower();
-}
-return power;
-}
+  // 전체 가격을 포함하는 각 부품의 가격을 합산
+  public int getPrice() {
+    int price = 0;
+    for(ComputerDevice component : components) {
+      price += component.getPrice();
+    }
+    return price;
+  }
+  // 전체 소비 전력량을 포함하는 각 부품의 소비 전력량을 합산
+  public int getPower() {
+    int power = 0;
+    for(ComputerDevice component : components) {
+      price += component.getPower();
+    }
+    return power;
+  }
 }
 
 public class Client {
-public static void main(String[] args) {
-// 컴퓨터의 부품으로 Keyboard, Body, Monitor 객체를 생성
-Keyboard keyboard = new Keyboard(5, 2);
-Body body = new Body(100, 70);
-Monitor monitor = new Monitor(20, 30);
+  public static void main(String[] args) {
+    // 컴퓨터의 부품으로 Keyboard, Body, Monitor 객체를 생성
+    Keyboard keyboard = new Keyboard(5, 2);
+    Body body = new Body(100, 70);
+    Monitor monitor = new Monitor(20, 30);
 
     // Computer 객체를 생성하고 addComponent()를 통해 부품 객체들을 설정
     Computer computer = new Computer();
@@ -242,9 +243,10 @@ Monitor monitor = new Monitor(20, 30);
     int computerPower = computer.getPower();
     System.out.println("Computer Price: " + computerPrice + "만원");
     System.out.println("Computer Power: " + computerPower + "W");
+  }
+}
 
-}
-}
+```
 
 - Computer 클래스
 
@@ -256,10 +258,11 @@ Monitor monitor = new Monitor(20, 30);
   - addComponent()메서드를 통해 부품 종류에 관계 없이 동일한 메서드로 부품의 추가가 가능하다.
 
 - 이를 통해 Computer 클래스는 OCP를 준수한다.
+
   - 새 부품의 추가는 ComputerDevice 클래스의 하위 클래스로 구현하면 된다.
 
-참조:
-https://blog.naver.com/PostView.nhn?blogId=mycho&logNo=221853446669&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postList&userTopListOpen=true&userTopListCount=30&userTopListManageOpen=false&userTopListCurrentPage=1
-https://gmlwjd9405.github.io/2018/08/10/composite-pattern.html
-https://jdm.kr/blog/228
-https://mygumi.tistory.com/343
+        참조:
+        https://blog.naver.com/PostView.nhn?blogId=mycho&logNo=221853446669&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postList&userTopListOpen=true&userTopListCount=30&userTopListManageOpen=false&userTopListCurrentPage=1
+        https://gmlwjd9405.github.io/2018/08/10/composite-pattern.html
+        https://jdm.kr/blog/228
+        https://mygumi.tistory.com/343
