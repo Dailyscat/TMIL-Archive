@@ -125,3 +125,8 @@ function main(){
 이후 main함수를 호출하면 우리는 Hello와 Click를 확인해볼 수 있다.
 
 위 같은 간단한 동작은 코드 몇줄로도 가능하지만 MVC 패턴을 적용함으로써 우리는 컨트롤러 내부에서 입력(클릭)과 다른 이벤트들을 들을 수 있고 모델을 업데이트 하거나 저장을 할 수 있다.
+
+```
+참조:
+https://medium.com/@patrickackerman/the-observer-pattern-with-vanilla-javascript-8f85ea05eaa8
+```
