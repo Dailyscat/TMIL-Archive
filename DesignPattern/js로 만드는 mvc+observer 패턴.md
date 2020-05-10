@@ -89,4 +89,5 @@ function Controller(model){
 참조:
 https://medium.com/@patrickackerman/the-observer-pattern-with-vanilla-javascript-8f85ea05eaa8
 https://www.hanbit.co.kr/media/channel/view.html?cms_code=CMS2276009419&cate_cd=
+https://dev-momo.tistory.com/entry/State-Pattern-%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%8A%B8-%ED%8C%A8%ED%84%B4
 ```
