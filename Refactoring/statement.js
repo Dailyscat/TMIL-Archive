@@ -1,4 +1,4 @@
-import createStatementData from "./createStatementData";
+const { createStatementData } = require("./createStatementData");
 const invoice = require("./invoices.json");
 const plays = require("./plays.json");
 
